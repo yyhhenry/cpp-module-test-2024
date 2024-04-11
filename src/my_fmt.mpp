@@ -1,0 +1,44 @@
+module;
+#ifndef ENABLE_CXX_MODULES
+#include "common.mpp"
+#include <print>
+#include <vector>
+#endif
+export module my_fmt;
+#ifdef ENABLE_CXX_MODULES
+import std;
+import common;
+#endif
+
+template <typename T>
+concept Printable = requires(T t) {
+    { std::print("{}", t) } -> std::convertible_to<void>;
+};
+
+export namespace my_fmt {
+    auto foo() {
+        common::foo();
+    }
+    auto bar() {
+        common::bar();
+    }
+
+    /**
+     * @brief Print a vector of printable objects
+     * [a, b, c, d]
+     */
+    template <typename T>
+    auto print_vec(const std::vector<T> &vec)
+        requires Printable<T>
+    {
+        std::print("[");
+        for (size_t i = 0; i < vec.size(); i++) {
+            std::print("{}", vec[i]);
+            if (i != vec.size() - 1) {
+                std::print(", ");
+            }
+        }
+        std::print("]");
+    }
+
+}
