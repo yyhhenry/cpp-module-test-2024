@@ -13,3 +13,5 @@
 为了让 VSCode 的 Xmake 插件能够正常工作，你可以在一次成功的编译之后（例如初次运行 `run.ps1` 后），打开 `xmake.lua` 额外按一次保存。
 
 如果看到了预料之外的错误，尝试 `xmake clean` 后再次运行 `run.ps1`。
+
+假如你想要用 Visual Studio 编译，你可以使用 `xmake project -k vsxmake` 生成 VS 的工程文件，然后用 VS 打开。
