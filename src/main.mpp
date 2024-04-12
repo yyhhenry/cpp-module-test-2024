@@ -16,8 +16,9 @@ auto main(int argc, char **argv) -> int {
     my_fmt::foo();
     my_fmt::bar();
 
+    // utf8 编码的字符串
     for (int i = 0; i < argc; i++) {
-        std::print("argv[{}]: {}\n", i, argv[i]);
+        std::print("第{}个命令行参数是 {}\n", i, argv[i]);
     }
     auto args = std::vector<std::string>(argv, argv + argc);
     my_fmt::print_vec(args);
