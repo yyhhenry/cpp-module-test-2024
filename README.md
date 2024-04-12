@@ -12,6 +12,6 @@
 
 实际上，不打开开关的情况下，仅仅导致 VSCode 的 IntelliSense 不报错，并提供正确的索引和高亮，能编译的版本还是只有模块化的版本。
 
-为了让 VSCode 的 Xmake 插件能够正常工作，你可以在一次成功的编译之后（例如初次运行 `run.ps1` 后），打开 `xmake.lua` 额外按一次保存。
+为了让 VSCode 的 Xmake 插件能够正常工作，你可以在一次成功的编译之后（VSCode 下方工具栏选中 main 然后 Build 之后），打开 `xmake.lua` 额外按一次保存。
 
-如果看到了预料之外的错误，尝试 `xmake clean` 后再次运行 `run.ps1`。
+如果看到了预料之外的错误，尝试 `xmake clean`。
