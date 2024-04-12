@@ -1,9 +1,7 @@
 module;
-#ifndef ENABLE_CXX_MODULES
-#include <print>
-#endif
+#include "stdc++.hpp"
 export module common;
-#ifdef ENABLE_CXX_MODULES
+#ifndef VSCODE
 import std;
 #endif
 export namespace common {

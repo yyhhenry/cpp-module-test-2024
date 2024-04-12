@@ -1,9 +1,7 @@
-#ifndef ENABLE_CXX_MODULES
+#ifdef VSCODE
 #include "common.mpp"
 #include "my_fmt.mpp"
-#include <print>
-#include <string>
-#include <vector>
+#include "stdc++.hpp"
 #else
 import std;
 import my_fmt;

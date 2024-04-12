@@ -1,11 +1,10 @@
 module;
-#ifndef ENABLE_CXX_MODULES
+#ifdef VSCODE
 #include "common.mpp"
-#include <print>
-#include <vector>
+#include "stdc++.hpp"
 #endif
 export module my_fmt;
-#ifdef ENABLE_CXX_MODULES
+#ifndef VSCODE
 import std;
 import common;
 #endif

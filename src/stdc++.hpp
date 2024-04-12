@@ -1,0 +1,25 @@
+#pragma once
+#ifdef VSCODE
+#include <algorithm>
+#include <concepts>
+#include <functional>
+#include <iostream>
+#include <iterator>
+#include <map>
+#include <numeric>
+#include <print>
+#include <queue>
+#include <random>
+#include <regex>
+#include <set>
+#include <sstream>
+#include <stack>
+#include <string>
+#include <tuple>
+#include <type_traits>
+#include <typeinfo>
+#include <unordered_map>
+#include <utility>
+#include <variant>
+#include <vector>
+#endif
