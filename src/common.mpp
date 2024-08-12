@@ -1,15 +1,12 @@
 module;
 #include "stdc++.hpp"
 export module common;
-#ifndef VSCODE
-import std;
-#endif
 export namespace common {
 
     auto foo() {
-        std::print("foo\n");
+        fmt::print("foo\n");
     }
     auto bar() {
-        std::print("bar\n");
+        fmt::print("bar\n");
     }
 }

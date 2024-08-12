@@ -1,7 +1,8 @@
 #pragma once
-#ifdef VSCODE
+#ifdef __INTELLISENSE__
 #include <algorithm>
 #include <concepts>
+#include <fmt/core.h>
 #include <functional>
 #include <iostream>
 #include <iterator>
@@ -22,4 +23,28 @@
 #include <utility>
 #include <variant>
 #include <vector>
+#else
+import <algorithm>;
+import <concepts>;
+import <functional>;
+import <iostream>;
+import <iterator>;
+import <map>;
+import <numeric>;
+import <print>;
+import <queue>;
+import <random>;
+import <regex>;
+import <set>;
+import <sstream>;
+import <stack>;
+import <string>;
+import <tuple>;
+import <type_traits>;
+import <typeinfo>;
+import <unordered_map>;
+import <utility>;
+import <variant>;
+import <vector>;
+import <fmt/core.h>;
 #endif
