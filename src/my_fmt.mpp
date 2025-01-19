@@ -1,8 +1,11 @@
 export module my_fmt;
-
+#if __INTELLISENSE__
+#include "common.mpp"
+#include "stdafx.hpp"
+#else
 import common;
 import std;
-
+#endif
 template <typename T>
 concept Printable = requires(T t) {
     { std::print("{}", t) } -> std::convertible_to<void>;

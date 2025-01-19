@@ -1,6 +1,12 @@
+#if __INTELLISENSE__
+#include "common.mpp"
+#include "my_fmt.mpp"
+#include "stdafx.hpp"
+#else
 import my_fmt;
 import common;
 import std;
+#endif
 
 auto main(int argc, char **argv) -> int {
 
