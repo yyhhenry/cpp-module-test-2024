@@ -1,15 +1,11 @@
-module;
-#include "stdc++.hpp"
 export module my_fmt;
-#ifdef __INTELLISENSE__
-#include "common.mpp"
-#else
+
 import common;
-#endif
+import std;
 
 template <typename T>
 concept Printable = requires(T t) {
-    { fmt::print("{}", t) } -> std::convertible_to<void>;
+    { std::print("{}", t) } -> std::convertible_to<void>;
 };
 
 export namespace my_fmt {
@@ -28,14 +24,14 @@ export namespace my_fmt {
     auto print_vec(const std::vector<T> &vec)
         requires Printable<T>
     {
-        fmt::print("[");
+        std::print("[");
         for (size_t i = 0; i < vec.size(); i++) {
-            fmt::print("{}", vec[i]);
+            std::print("{}", vec[i]);
             if (i != vec.size() - 1) {
-                fmt::print(", ");
+                std::print(", ");
             }
         }
-        fmt::print("]");
+        std::print("]");
     }
 
 }

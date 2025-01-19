@@ -1,12 +1,6 @@
-#include "stdc++.hpp"
-
-#ifdef __INTELLISENSE__
-#include "common.mpp"
-#include "my_fmt.mpp"
-#else
 import my_fmt;
 import common;
-#endif
+import std;
 
 auto main(int argc, char **argv) -> int {
 
@@ -18,7 +12,7 @@ auto main(int argc, char **argv) -> int {
 
     // utf8 编码的字符串
     for (int i = 0; i < argc; i++) {
-        fmt::print("第{}个命令行参数是 {}\n", i, argv[i]);
+        std::print("第{}个命令行参数是 {}\n", i, argv[i]);
     }
     auto args = std::vector<std::string>(argv, argv + argc);
     my_fmt::print_vec(args);

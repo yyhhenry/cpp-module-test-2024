@@ -1,12 +1,11 @@
-module;
-#include "stdc++.hpp"
 export module common;
+import std;
 export namespace common {
 
     auto foo() {
-        fmt::print("foo\n");
+        std::print("foo\n");
     }
     auto bar() {
-        fmt::print("bar\n");
+        std::print("bar\n");
     }
 }
